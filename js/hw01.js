@@ -10,15 +10,29 @@ const personalMovieDB = {
     privat: false
 };
 
-const ans1 = prompt("What was the last film you have seen?", ""),
-    ans2 = +prompt("Rate it!", "0"),
-    ans3 = prompt("What was the last film you have seen?", ""),
-    ans4 = +prompt("Rate it!", "0");
-
-personalMovieDB.movies[ans1] = ans2;
-personalMovieDB.movies[ans3] = ans4;
+let count = 0;
+while (count < numberOfFilms) {
+    const a1 = prompt("What was the last film you have seen?", ""),
+        a2 = +prompt("Rate it!", "");
+    if (a1 != null && a2 != null && a1.length > 0 && a1.length < 51 && a2 > 0) {
+        personalMovieDB.movies[a1] = a2;
+        console.log("Done");
+    } else {
+        console.log("Error"); 
+        continue; }
+    count++;
+}
 
 console.log(personalMovieDB);
 console.log(personalMovieDB.movies);
+
+(numberOfFilms < 3) ? console.log("Too little")
+    : (numberOfFilms < 5) ? console.log("You like movies")
+        : (numberOfFilms < 7) ? console.log("You are cinemaman")
+            : console.log("Error");
+
+
+
+
 
 
