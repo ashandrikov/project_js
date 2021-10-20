@@ -2,9 +2,9 @@
 
 let numberOfFilms;
 
-function start(){
+function start() {
     numberOfFilms = +prompt("How many movies have you seen1?", '');
-    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)){
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
         numberOfFilms = +prompt("How many movies have you seen2?", '');
     }
 }
@@ -37,17 +37,17 @@ function askQuestion(num) {
 
 // askQuestion(personalMovieDB.count);
 
-function showMyDB(hidden){
+function showMyDB(hidden) {
     if (!hidden) {
         console.log(personalMovieDB);
         console.log(personalMovieDB.movies);
-    } 
+    }
 }
 
 showMyDB(personalMovieDB.privat);
 
 
-function showYourCinemaStatus(num){
+function showYourCinemaStatus(num) {
     if (num < 3) {
         console.log("Too little");
     } else if (num < 5) {
@@ -59,10 +59,10 @@ function showYourCinemaStatus(num){
 
 showYourCinemaStatus(personalMovieDB.count);
 
-function writeYourGenres(){
+function writeYourGenres() {
     for (let i = 1; i < 4; i++) {
         const genre = prompt(`What's your favourite genre numer ${i}?`, "");
-        personalMovieDB.genres[i] = genre;
+        personalMovieDB.genres[i - 1] = genre;
     }
 }
 
