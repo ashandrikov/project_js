@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; //20.10
 
 // function learnJS(lang, callback){
 //     console.log(`I am learning: ${lang}`);
@@ -90,7 +90,7 @@ const personalMovieDB = {
     writeYourGenres: function () {
         for (let i = 1; i < 4; i++) {
             const genre = prompt(`What's your favourite genre numer ${i}?`, "");
-            if (genre == null || genre == '' || genre.length < 1) {
+            if (genre == null || genre == '') {
                 console.log("incorrect input");
                 i--;
                 continue;
@@ -111,11 +111,6 @@ const personalMovieDB = {
     }
 
 };
-
-// askQuestion(personalMovieDB.count);
-// showMyDB(personalMovieDB.privat);
-// showYourCinemaStatus(personalMovieDB.count);
-// writeYourGenres();
 
 // personalMovieDB.start();
 // personalMovieDB.rememberMyMovies();
