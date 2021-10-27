@@ -7,6 +7,7 @@
 
 // touches - список всех пальцев на экране
 // targetTouches - список пальцев, взаимд. с данным элементом
+// changedTouches - список пальцев, участвующих в текущем событии
 
 window.addEventListener('DOMContentLoaded', () => {
 
